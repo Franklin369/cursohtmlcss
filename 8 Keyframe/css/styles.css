@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vH;
+  background: #1B1B1B;
+}
+body .container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+body .container .bubbles {
+  position: relative;
+  display: flex;
+}
+body .container .bubbles span {
+  position: relative;
+  min-width: 30px;
+  height: 30px;
+  background: #fff;
+  box-shadow: 0 0 0 10px rgba(79, 195, 220, 0.2666666667), 0 0 50px #705AFE, 0 0 100px #4fc3dc;
+  margin: 0 4px;
+  border-radius: 50%;
+  -webkit-animation: animate 15s linear infinite;
+          animation: animate 15s linear infinite;
+  -webkit-animation-duration: calc(75s / var(--i));
+          animation-duration: calc(75s / var(--i));
+}
+body .container .bubbles span:nth-child(even) {
+  background: #FFC107;
+  box-shadow: 0 0 0 10px #F0DB4F, 0 0 50px #ff2d75, 0 0 100px #F23B00;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}/*# sourceMappingURL=styles.css.map */

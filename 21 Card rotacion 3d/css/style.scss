@@ -1,0 +1,95 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap";
+*{
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  perspective: 1000px;
+    width: 100%;
+    flex-wrap: wrap;
+    .card{
+        position: relative;
+        width: 320px;
+        height: 320px;
+        margin: 20px;
+      
+        border-radius: 15px;
+        overflow: hidden;
+        
+        .box{
+            position: absolute;
+            top: 0;
+			left: 0;
+            width: 100%;
+			height: 100%;
+            transform-style: preserve-3d;
+            transition: 1s ease;
+
+        }
+        &:hover{
+            .box{
+                transform: rotateY(180deg);
+            }
+        }
+        .imgBx{
+            position: absolute;
+            top: 0;
+			left: 0;
+            width: 100%;
+			height: 100%;
+            img{
+                position: absolute;
+				top: 0;
+				left: 0;
+                width: 100%;
+				height: 100%;
+                object-fit: cover;
+            }
+        }
+        .contentBx{
+            position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+            background: #333;
+            transform: rotateY(180deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+			transform-style: preserve-3d;
+            backface-visibility: hidden;
+            div{
+               
+                transform: translateZ(100px);
+                background: linear-gradient(45deg, #fe0061, #FFEB3B);
+                padding: 20PX;
+				margin:0 30px;
+                border-radius: 15px;
+                h2 {
+					font-size: 20px;
+					color: #fff;
+					letter-spacing: 1px;
+					backface-visibility: hidden;
+				}
+                p {
+					font-size: 16px;
+					color: #fff;
+					backface-visibility: hidden;
+				}
+            }
+        }
+
+    }
+}

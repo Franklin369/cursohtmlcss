@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+   box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #e91e63, #fffde7);
+
+}
+.player{
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    width: 350px;
+    background: #f1f3f4;
+    box-shadow: 0 50px 80px rgba(0,0,0,0.25);
+    .imgBx{
+        position: relative;
+        width: 100%;
+        height: 350px;
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    audio{
+        width: 100%;
+        outline: none;
+    }
+}

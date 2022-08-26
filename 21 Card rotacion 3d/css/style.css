@@ -1,0 +1,94 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+section .card {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+section .card .box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 1s ease;
+}
+section .card:hover .box {
+  transform: rotateY(180deg);
+}
+section .card .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+section .card .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section .card .contentBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+section .card .contentBx div {
+  transform: translateZ(100px);
+  background: linear-gradient(45deg, #fe0061, #FFEB3B);
+  padding: 20PX;
+  margin: 0 30px;
+  border-radius: 15px;
+}
+section .card .contentBx div h2 {
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: 1px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+section .card .contentBx div p {
+  font-size: 16px;
+  color: #fff;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}/*# sourceMappingURL=style.css.map */

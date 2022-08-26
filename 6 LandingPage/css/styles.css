@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.main {
+  position: relative;
+  min-height: 100vh;
+  background: radial-gradient(#f0483a, #d10a20);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 100px;
+}
+.main header {
+  min-width: 100%;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+.main header .logo {
+  max-width: 90px;
+}
+.main header .navigation {
+  display: flex;
+}
+.main header .navigation li {
+  list-style: none;
+}
+.main header .navigation li a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 40px;
+}
+.main .content {
+  margin-top: 50px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .content .text {
+  width: 100%;
+  max-width: 600px;
+}
+.main .content .text h2 {
+  color: #fff;
+  font-size: 5em;
+  font-weight: 300;
+  line-height: 1.1em;
+  margin: 20px 0;
+}
+.main .content .text h2 span {
+  font-weight: 700;
+}
+.main .content .text p {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  margin: 20px 0;
+}
+.main .content .text .btn {
+  position: relative;
+  display: inline-block;
+  padding: 20px 50px;
+  background: #fff;
+  color: #333;
+  font-size: 1.1em;
+  font-weight: 500;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: 0.25s;
+}
+.main .content .text .btn:hover {
+  letter-spacing: 2px;
+}
+.main .content-img {
+  position: relative;
+}
+.main .content-img .imgMuestra {
+  display: block;
+}
+.main .content-img .imgMuestra img {
+  width: 100%;
+  max-width: 600px;
+}
+.main .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  padding: 30px 100px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.main .footer .sci {
+  display: flex;
+}
+.main .footer .sci li {
+  list-style: none;
+}
+.main .footer .sci li a {
+  color: #fff;
+  font-size: 2em;
+  margin-right: 20px;
+  display: inline-block;
+  transition: 0.25s;
+}
+.main .footer .sci li a:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding: 20px;
+  }
+  .main .content .text h2 {
+    margin-top: 40px;
+  }
+  .footer {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .footer .sci {
+    margin-top: 40px;
+    margin-right: -80px;
+  }
+}/*# sourceMappingURL=styles.css.map */

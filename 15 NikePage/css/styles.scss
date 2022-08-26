@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 100px 0;
+  background: linear-gradient(to bottom, #d509a0, #ff606e);
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 40px 100px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      img {
+        max-width: 100px;
+      }
+    }
+    .toggle {
+      width: 30px;
+      height: 30px;
+      background: url(../img/menu.png);
+      background-size: 30px;
+      cursor: pointer;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  .content {
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+   padding-bottom: 40px;
+    .imgBx {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      
+      img {
+        max-width: 100%;
+        animation: animacionZapatilla 3.3s linear infinite;
+      }
+    }
+    .text {
+      max-width: 700px;
+      margin-top: 20px;
+      h2 {
+        color: #fff;
+        font-size: 2.5em;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+      p {
+        color: #fff;
+      }
+      a {
+        display: inline-block;
+        padding: 10px 30px;
+        color: #111;
+        background: #fff;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-decoration: none;
+        letter-spacing: 2px;
+        margin-top: 15px;
+      }
+    }
+  }
+  &:before {
+    content: "ZOOMX";
+    font-size: 20vw;
+    position: absolute;
+    color: #0001;
+    display: flex;
+    font-weight: 900;
+    padding-top: 20vh;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.sci {
+  position: absolute;
+  bottom: 50px;
+  right: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  li {
+    list-style: none;
+   
+    a {
+      display: block;
+      color: #fff;
+      &:hover{
+        transform: scale(1.4);
+        transition: 0.6s;
+        
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  header {
+    padding: 20px 40px;
+  }
+  section {
+    padding: 40px 40px 0;
+    overflow: hidden;
+    &:before {
+      font-size: 20vh;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .content {
+    
+    margin-top: 120px;
+    .imgBx {
+      margin-top: 65px;
+    }
+  }
+  .sci {
+    position: relative;
+    justify-content: flex-start;
+    flex-direction: row;
+    bottom: 10px;
+    right: inherit;
+    margin-top: 40px;
+    li {
+      margin-right: 15px;
+    }
+  }
+}
+@keyframes animacionZapatilla{
+    0%,100%{
+        transform: translateY(-20px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+}

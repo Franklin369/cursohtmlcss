@@ -1,0 +1,120 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #ebf5fc;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  padding: 20px 0;
+  flex-wrap: wrap;
+  
+  .card {
+    position: relative;
+    min-width: 320px;
+    height: 440px;
+    box-shadow:inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+     inset -5px -5px 5px rgba(255, 255, 255, 0.5), 5px 5px 5px rgba(0, 0, 0, 0.05),
+      -5px -5px 5px rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    margin: 30px;
+    .box {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      background: #ebf5fc;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background:rgba(255,255,255,0.02);
+        
+     }
+      .content {
+        padding: 20px;
+        text-align: center;
+        h2{
+            position: absolute;
+            top: -10px;
+            right: 30px;
+            font-size: 8em;
+            color: rgba(0,0,0,0.02);
+            transition: 0.5s;
+        }
+        h3 {
+            font-size: 1.8em;
+            color: #777;
+            z-index: 1;
+            transition: 0.4s;
+        }
+        p {
+            font-size: 16px;
+            font-weight: 300;
+            color: #777;
+            z-index: 1;
+            transition: 0.4s;
+        }
+        a {
+            position: relative;
+            display: inline-block;
+            padding: 8px 20px;
+            background: #03a9f4;
+            margin-top: 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 400;
+            color: #fff;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+      }
+
+    }
+    &:hover{
+        .box{
+            transform: translateY(-50px);
+            transition: 0.5S;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            background: linear-gradient(45deg,#b95ce4,#e91e63);
+        	background: linear-gradient(45deg,#b95ce4,#4f29cd);
+            .content{
+                h2 {
+                    color: rgba(0,0,0,0.05);
+                }
+                h3 {
+                    color: rgba(255,255,255,1);
+                }
+                p {
+                    color: rgba(255,255,255,1);
+                }
+                a {
+                    background: #ff568f;
+                }
+
+            }
+        }
+    }
+  }
+}
