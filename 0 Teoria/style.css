@@ -1,29 +1,19 @@
-body {
+body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
 }
-
-.container {
-    background: #202020;
+.container{
+    background: black;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-
 }
-.boxcontainer{
-    background: #7250FF;
-    height: 400px;
-    width: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.uno{
+    background: red;
+    width: 200px;
+    height: 200px;
     border-radius: 15px;
 }
-.uno {
-    background: #F13929;
+.dos{
+    background: yellow;
     width: 200px;
     height: 200px;
     border-radius: 15px;
