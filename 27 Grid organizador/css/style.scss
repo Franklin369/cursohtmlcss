@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  margin: 50px auto;
+  background-color: #d8dae2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+  gap: 56px;
+  width: 90%;
+  min-height: 400px;
+  background: #eff0f1;
+  box-shadow: 0px 76px 27px rgba(6, 27, 82, 0.1);
+  border-radius: 26px;
+  .header {
+    h1 {
+      color: #291d19;
+    }
+    .btns {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      .active {
+        color: #fff;
+        background: #bc9682;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+      }
+      span {
+        padding: 8px 10px;
+        background: #ffffff;
+        border-radius: 6px;
+        font-size: 14px;
+        transition: all 0.5s linear;
+        &:hover {
+          cursor: pointer;
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+  .cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(250px, 1fr);
+    gap: 20px;
+    .card {
+      overflow: hidden;
+      background: #fff;
+      border-radius: 20px;
+      min-height: 250px;
+      padding: 20px;
+      box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+      .imgs {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 220px 80px;
+        gap: 20px;
+        .img {
+          overflow: hidden;
+          border-radius: 16px;
+          &:first-of-type {
+            grid-column: 1/4;
+          }
+        }
+      }
+      .info {
+        color: #0e0e38;
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h2 {
+          font-size: 18px;
+          font-weight: 300;
+        }
+        .tag {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+          img {
+            width: 20px;
+            cursor: normal;
+          }
+        }
+      }
+    }
+  }
+}
