@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body::before {
+  content: "";
+  position: absolute;
+  bottom: -200px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgb(32, 8, 60) 20%, transparent);
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 460px;
+  background: #000;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  transition: all 0.3s;
+  z-index: 100;
+}
+.card:hover {
+  box-shadow: 0 0 50px #273234;
+}
+.card:hover .poster:before {
+  bottom: 0;
+}
+.card:hover .poster img {
+  filter: blur(5px);
+  transform: translateY(-60px);
+}
+.card:hover .details {
+  bottom: 0;
+}
+.card .poster {
+  position: relative;
+  overflow: hidden;
+}
+.card .poster:before {
+  content: "";
+  position: absolute;
+  bottom: -200px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 70%, transparent);
+  transition: 0.5s;
+  z-index: 1;
+}
+.card .poster img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  transition: 0.5s;
+}
+.card .details {
+  position: absolute;
+  padding: 20px;
+  width: 100%;
+  height: 85%;
+  bottom: -200px;
+  left: 0;
+  box-sizing: border-box;
+  transition: 0.5s;
+  z-index: 2;
+}
+.card .details .imgcontent {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  text-align: start;
+}
+.card .details .imgcontent img {
+  width: 70%;
+}
+.card .details .imgcontent span {
+  font-size: 14px;
+  color: rgb(253, 253, 252);
+}
+.card .details .rating {
+  position: relative;
+  padding: 5px 0;
+}
+.card .details .rating .fas,
+.card .details .rating .far {
+  color: #f7f406;
+  margin-right: 2px;
+  font-size: 16px;
+}
+.card .details .rating span {
+  color: #fff;
+  padding: 0 5px;
+}
+.card .details .tags {
+  position: relative;
+  margin-top: 5px;
+}
+.card .details .tags span {
+  padding: 2px 5px;
+  margin-right: 2px;
+  color: #fff;
+  display: inline-block;
+  border-radius: 4px;
+}
+.card .details .tags .fantasy {
+  background: rgb(114, 49, 243);
+}
+.card .details .tags .mystery {
+  background: rgb(242, 7, 132);
+}
+.card .details .info {
+  color: #fff;
+}
+.card .details .info p {
+  margin: 15px 0 10px;
+}
+.card .details .cast {
+  position: relative;
+}
+.card .details .cast h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+.card .details .cast ul {
+  margin: 10px 0 0;
+  padding: 0;
+  display: flex;
+}
+.card .details .cast ul li {
+  list-style: none;
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 6px;
+  border: 2px solid #fff;
+}
+.card .details .cast ul li img {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
