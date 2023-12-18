@@ -1,0 +1,59 @@
+.home{
+    background-color: var(--first-color);
+    padding: 9rem 0 2rem;
+    height: 100vh;
+    display: grid;
+
+    &__container{
+        display: grid;
+        align-content: center;
+        row-gap: 2.5rem;
+    }
+    &__data{
+        text-align: center;
+    }
+    &__title{
+        font-size: var(--biggest-font-size);
+        margin: .75rem 0;
+    }
+    &__button{
+        margin-top: 2rem;
+        display: inline-block;
+        background-color: var(--text-color);
+        color: #fff;
+        padding: .80rem 1.5rem;
+        border-radius: 3rem;
+        transition: .4s;
+        &:hover{
+            box-shadow: 0 4px 12px hsla(38, 69%, 8%, .2);
+        }
+    }
+    &__img img{
+        width: 20vw;
+        animation: flotar 1.8s infinite alternate
+    }
+    &__img{
+        justify-self: center;
+    }
+    &__footer{
+        display: flex;
+        justify-content: center;
+        column-gap: .5rem;
+        font-size: var(--smaller-font-size);
+        align-self: flex-end;
+    }
+
+
+
+    
+}
+
+
+@keyframes flotar {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(15px);
+    }
+}
